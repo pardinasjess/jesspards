@@ -27,11 +27,9 @@ Route::get('/exam', function () {
     return view('exam');
 });
 
-Route::get('/emp', 'EmployeeController@empshow');
-
 Route::get('/logemp', function () {
     return view('logemp');
-});
+})->name('logemp');
 
 Route::get('/logadmin', function () {
     return view('logadmin');
@@ -40,8 +38,8 @@ Route::get('/logadmin', function () {
 Route::get('/admin', 'EmployeeController@show', 'user');
 
 Route::post('/addemp', ['uses'=>'EmployeeController@postAddEmp', 'as'=>'emp.add']);
-Route::post('/addapp', ['uses'=>'ApplicantController@appReg', 'as'=>'app.add']);
 
+Route::post('/addapp', ['uses'=>'ApplicantController@appReg', 'as'=>'app.add']);
 
 Route::get('/upform', function () {
     return view('upform');
@@ -63,10 +61,13 @@ Route::get('/delete/{user_id}', ['uses'=>'EmployeeController@deleteemp', 'as'=>'
 
 Route::get('/gencode', ['uses'=>'EmployeeController@gencode', 'as'=>'gencode']);
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::middleware(['auth:employees'])->group(function(){
+    Route::get('/emp', 'EmployeeController@empshow');
+});
 
 /*Route::post('profle', 'EmployeeController@update_avatar');*/
 
