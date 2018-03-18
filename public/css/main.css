@@ -1,0 +1,127 @@
+HOMEPAGE
+
+html, body{
+	width: 100%;
+	height: 100%;
+}
+.carousel-inner img{
+	width: 100%;
+	height: 70vh;
+}
+
+.fsizeDesc {
+	padding-top: 50px;
+	font-size: 30px;
+	height: 40vh;
+}
+
+.navtext{
+	color: white;
+}
+
+.fsizeCol{
+	padding-top: 40px;
+	background-color: #d1cfbe;
+	height: 50vh;
+
+}
+
+
+.thirdcont{
+	padding-left: 0!important;
+	padding-right: 0!important;
+	text-align: center;
+	height: 50vh;
+}
+
+.footerbg{
+	background-color: #091930;
+	height: 5vh;
+	color: white;
+}
+
+.headerapp{
+	
+	background-color: #203941;
+	color: white;
+	height: 10vh;
+	display: block;
+}
+
+.bgapp{
+	background-image:url('/img/10.jpg');
+	/*background-color: #3eb984;*/
+	display: block;
+	min-height: 90.3vh;
+}
+
+.bginapp{
+	background-color: #ece7de;
+}
+
+.bginemp{
+	background-color: #ece7de;
+	height: 70vh;
+}
+
+input.sub{
+	width: 30%;
+}
+
+.logapp{
+	background-color: white;
+	margin-top: 130px;
+}
+.logtop{
+	color: white;
+	background-color: #091930;
+}
+
+.logemp{
+	background-color: white;
+	margin-top: 130px;
+
+}
+
+.navemp{
+	align-content: center;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+.bord{
+	border: 5px;
+	border-style: solid;
+}
+
+.bodybg {
+ 
+background-image: url("img_girl.jpg");
+    height: 100%; 
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pic{
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+	margin: 0px;
+}
+
+#wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+
+  .fa-arrow-circle-left{
+	color: white;
+	font-size: 2em;
+  }
+
