@@ -19,8 +19,7 @@ class EmployeeController extends Controller
 
     public function empshow()
     {
-    	$user = Employee::where('EmpId', '1')->first(); //temporary
-        return view('emp', ['user' => $user]);
+        return view('emp');
     }
 
     public function postAddEmp(Request $request) //data type $request

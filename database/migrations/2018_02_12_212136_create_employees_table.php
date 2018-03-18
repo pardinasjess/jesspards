@@ -17,7 +17,6 @@ class CreateEmployeesTable extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->string('EmpId')->unique();
             $table->string('LastName');
             $table->string('FirstName');
@@ -36,7 +35,8 @@ class CreateEmployeesTable extends Migration
             $table->string('EmpStatus');
             $table->string('EmpPass');
             $table->string('avatar')->default('pic1.jpg');
-            $table->string('remember_token', 100)->nullable();
+            $table->rememberToken();
+            $table->timestamps();
 
         });
     }
