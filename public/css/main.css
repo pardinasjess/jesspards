@@ -19,13 +19,24 @@ html, body{
 	color: white;
 }
 
+#sidebar {
+	position: fixed;
+	right: -15.625em;
+	width: 15.625em;
+	z-index: 1000000;
+	background-color: aliceblue;
+}
+
+.wrap {
+	position: relative;
+}
+
 .fsizeCol{
 	padding-top: 40px;
 	background-color: #d1cfbe;
 	height: 50vh;
 
 }
-
 
 .thirdcont{
 	padding-left: 0!important;
@@ -68,19 +79,9 @@ input.sub{
 	width: 30%;
 }
 
-.logapp{
-	background-color: white;
-	margin-top: 130px;
-}
 .logtop{
 	color: white;
 	background-color: #091930;
-}
-
-.logemp{
-	background-color: white;
-	margin-top: 130px;
-
 }
 
 .navemp{
@@ -125,3 +126,7 @@ background-image: url("img_girl.jpg");
 	font-size: 2em;
   }
 
+  .btn.focus, .btn:focus {
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+}
