@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
+@extends('layouts.master')
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/popper.js"></script>
-    <script src="/js/bootstrap.js"></script>
-    <script defer src="/js/fontawesome-all.js"></script>
-	<title>Employee</title>
-</head>
-<body>
+@section('title', 'Employee')
 
+@section('content')
     <nav class="navtext p-3 navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
@@ -146,5 +134,4 @@
                 </form>
             </div>
     </div>
-</body>
-</html>
+@endsection

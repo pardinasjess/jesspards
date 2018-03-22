@@ -46,7 +46,7 @@ class EmployeeController extends Controller
     	$emp->PagibigNum=$request['Pagibignum'];
     	$emp->EmpPos=$request['Pos'];
     	$emp->EmpStatus=$request['EmpStatus'];
-    	$emp->EmpPass=bcrypt('0987654321');
+    	$emp->EmpPass=bcrypt('testuser');
     	$emp->save();
 		$message='Data Saved!';
 		return back()->withInput(['tab'=>'idnumb']);

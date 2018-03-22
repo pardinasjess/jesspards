@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Admin;
 
 class Employee extends Authenticatable
 {
@@ -21,6 +22,21 @@ class Employee extends Authenticatable
 
     public function getAuthPassword() {
 		return $this->EmpPass;
-	}
+    }
+    
+    protected $appends = ['is_admin'];
+    
+    public function admin() {
+        return $this->hasOne('App\Admin');
+    }
 
+    public function getIsAdminAttribute() {
+        $isAdmin = false;
+
+        if(Admin::where('EmpId', $this->id)->exists()) {
+            $isAdmin = true;
+        }
+
+        return $this->attributes['is_admin'] = $isAdmin;
+    }
 }

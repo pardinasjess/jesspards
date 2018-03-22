@@ -25,7 +25,7 @@ class EmployeesTableSeeder extends Seeder
             'DateHired' => '2016-02-10',
            	'EmpPos' => 'staff',
            	'EmpStatus' => 'Regular',
-            'EmpPass' => bcrypt('0987654321'),
+            'EmpPass' => bcrypt('admin'),
         ]);
 
 
